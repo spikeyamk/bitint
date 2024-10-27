@@ -17,8 +17,8 @@ public:
             >
         >
     >;
+
     static constexpr storage_t max_value { (1 << bits) - 1 };
-private:
     storage_t value : bits { 0 };
 public:
     // Constructors
