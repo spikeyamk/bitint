@@ -1,2 +1,2 @@
-add_library(${CMAKE_PROJECT_NAME} bitint.cpp)
-target_include_directories(${CMAKE_PROJECT_NAME} PUBLIC include)
+add_library(bitint bitint.cpp)
+target_include_directories(bitint PUBLIC include)
