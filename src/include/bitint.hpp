@@ -33,9 +33,10 @@ namespace detail {
         };
 
         storage value : bits { 0 };
-    public:
+    private:
         constexpr bitint() = default;
-        constexpr bitint(const storage val) : value{ val } {}
+    public:
+        constexpr bitint(const storage value) : value { value } {}
 
         constexpr storage unwrap() const { return value; }
 
