@@ -22,15 +22,17 @@ namespace detail {
             >
         >;
 
-        static constexpr storage max_value = is_signed
+        static constexpr storage max {
+            is_signed
             ? ((1 << (bits - 1)) - 1)
-            : ((1 << bits) - 1);
-        static constexpr storage min_value = is_signed
+            : ((1 << bits) - 1)
+        };
+        static constexpr storage min { is_signed
             ? -(1 << (bits - 1))
-            : 0;
+            : 0
+        };
 
         storage value : bits { 0 };
-
     public:
         constexpr bitint() = default;
         constexpr bitint(const storage val) : value{ val } {}
