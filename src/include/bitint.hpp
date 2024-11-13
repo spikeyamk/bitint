@@ -54,7 +54,7 @@ namespace detail {
         constexpr bitint operator&(const bitint& other) const { return bitint(value & other.value); }
         constexpr bitint operator|(const bitint& other) const { return bitint(value | other.value); }
         constexpr bitint operator^(const bitint& other) const { return bitint(value ^ other.value); }
-        constexpr bitint operator~() const { return bitint(~value & max_value); }
+        constexpr bitint operator~() const { return bitint(~value & max); }
 
         constexpr bitint& operator&=(const bitint& other) { value &= other.value; return *this; }
         constexpr bitint& operator|=(const bitint& other) { value |= other.value; return *this; }
